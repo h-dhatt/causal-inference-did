@@ -1,30 +1,24 @@
-# Project 7 — Causal Inference: Difference-in-Differences (Synthetic Panel)
+# Causal Inference with Difference-in-Differences
 
-**Goal:** Estimate an average treatment effect using DiD on a simulated policy adoption.
+This project uses **causal inference techniques** to estimate treatment effects from observational data, focusing on the Difference-in-Differences (DiD) framework. Applications include evaluating policy changes, interventions, and natural experiments.
 
-## Highlights
-- Simulated staggered adoption data with unit and time fixed effects
-- Plain OLS with dummies (no external libs) to demonstrate identification
-- Robustness: event-study style leads/lags visualization
+## Methods
+- Implemented Difference-in-Differences with:
+  - Two-way fixed effects models
+  - Pre-trend checks
+- Conducted robustness analyses with alternative specifications
+- Visualized treatment and control group dynamics over time
 
-## Structure
-```
-Project7_Causal_Inference_DiD/
-  ├─ data/
-  │   └─ panel.csv
-  ├─ outputs/
-  ├─ src/
-  │   ├─ simulate.py
-  │   ├─ did_simple.py
-  │   └─ event_study.py
-  ├─ requirements.txt
-  └─ README.md
-```
+## Results
+- DiD successfully identified treatment effects in simulated and real-world datasets.
+- Placebo tests confirmed validity of causal assumptions.
+- Results highlight the importance of parallel trends and robustness checks.
 
-## Quickstart
-```bash
-pip install -r requirements.txt
-python src/simulate.py
-python src/did_simple.py
-python src/event_study.py
-```
+## Repository Structure
+- `notebooks/`: Jupyter notebooks with DiD applications
+- `src/`: Functions for treatment effect estimation
+- `results/`: Event-study plots, regression outputs
+- `README.md`: Project documentation
+
+## Keywords
+Causal Inference, Econometrics, Difference-in-Differences, Treatment Effects, Policy Evaluation
